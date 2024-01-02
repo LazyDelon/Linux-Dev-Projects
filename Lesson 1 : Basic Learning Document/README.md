@@ -1,1 +1,1 @@
-# Basic Learning for CentOS 7
+# Basic Learning for CentOS 7.x
