@@ -1,6 +1,6 @@
 # Basic Learning for CentOS 7.x
 
-## 📣 在終端介面登入linux
+## 📣 Log in to linux through the terminal interface
 
 ```
 CentOS Linux 7 (Core)
@@ -38,3 +38,40 @@ Last login: Fri May 29 11:55:05 on tty1         ← 上次登入的情況
 
 #### 6. [root@localhost ~]$ _:
 **This line is a message that is displayed after correct login. The localhost on the far left displays the "current user account", and the root followed by @ is the "host name". As for the ~ on the far right, it refers to " Directory you are currently in", that $ is the "prompt character" we often talk about!**
+
+
+
+➤  **資料來源：** [**基礎學習篇 - CentOS 7.x by~鳥哥**](https://linux.vbird.org/linux_basic/centos7/0160startlinux.php) 
+
+
+
+
+## 📣 Start giving orders
+
+
+```
+
+[root@localhost ~]$ command  [-options]  parameter1  parameter2 ...
+                      指令     選項        參數(1)     參數(2)
+
+```
+
+
+## 📋 The above instructions are detailed as follows:
+
+**1. The first input part in a line of instructions is definitely "command" or "executable file (such as batch script, script)"**
+
+**2. command is the name of the command, for example, the command to change the working directory is cd, etc.;**
+
+**3. The scratch sign [] does not exist in the actual command. When adding option settings, there is usually a - sign before the option, such as -h; sometimes the full name of the option is used, and the option is preceded by -- Symbols, such as --help;**
+
+**4. parameter1 parameter2.. is the parameter attached to the option, or the parameter of command;**
+
+**5. Instructions, options, parameters, etc. are separated by spaces. No matter how many spaces there are, the shell will treat them as one space. So spaces are very important special characters! ;**
+
+**6. After pressing the [Enter] button, the command will be executed immediately. The [Enter] button represents the start of a line of instructions.**
+
+**7. When the instruction is too long, you can use a backslash (\) to escape the [Enter] symbol so that the instruction continues to the next line. Notice! Just follow the special character immediately after the backslash to escape!**
+
+**8. other:
+In Linux systems, English uppercase and lowercase letters are different. For example, cd is not the same as CD.**
