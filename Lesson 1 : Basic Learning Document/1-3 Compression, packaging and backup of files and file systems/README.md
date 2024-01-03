@@ -210,9 +210,9 @@ Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename
 
 ```
 
-[root@localhost ~]$ tar [-z|-j|-J] [cv] [-f 待建立的新檔名] filename... <==打包與壓縮
-[root@localhost ~]$ tar [-z|-j|-J] [tv] [-f 既有的 tar檔名]             <==察看檔名
-[root@localhost ~]$ tar [-z|-j|-J] [xv] [-f 既有的 tar檔名] [-C 目錄]   <==解壓縮
+[root@localhost ~]$ tar [-z|-j|-J] [cv] [-f 待建立的新檔名] filename...   ← 打包與壓縮
+[root@localhost ~]$ tar [-z|-j|-J] [tv] [-f 既有的 tar檔名]               ← 察看檔名
+[root@localhost ~]$ tar [-z|-j|-J] [xv] [-f 既有的 tar檔名] [-C 目錄]     ← 解壓縮
 
 選項與參數：
 -c  ：建立打包檔案，可搭配 -v 來察看過程中被打包的檔名(filename)
@@ -249,7 +249,7 @@ Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename
 [root@localhost ~]$ su -  # 因為備份 /etc 需要 root 的權限，否則會出現一堆錯誤
 
 [root@localhost ~]# time tar -zpcv -f /root/etc.tar.gz /etc
-tar: Removing leading `/' from member names  <==注意這個警告訊息
+tar: Removing leading `/' from member names       ← 注意這個警告訊息
 /etc/
 ....(中間省略)....
 /etc/hostname
@@ -352,7 +352,7 @@ drwxr-xr-x. 131 root   root     8192 Jun 26 22:14 etc
 [root@localhost ~]# tar -jtv -f /root/etc.tar.bz2 | grep 'shadow'
 ---------- root/root       721 2015-06-17 00:20 etc/gshadow
 ---------- root/root      1183 2015-06-17 00:20 etc/shadow-
----------- root/root      1210 2015-06-17 00:20 etc/shadow  <==這是我們要的！
+---------- root/root      1210 2015-06-17 00:20 etc/shadow     ← 這是我們要的！
 ---------- root/root       707 2015-06-17 00:20 etc/gshadow-
 
 # 先搜尋重要的檔名！其中那個 grep 是『擷取』關鍵字的功能！我們會在第三篇說明！
