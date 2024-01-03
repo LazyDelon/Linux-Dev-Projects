@@ -1,8 +1,8 @@
-File permissions & directory configuration
+# Linux Development - File permissions & directory configuration
 
 
 
-# Users & Groups
+## 🎓 Users & Groups
 
 
 
