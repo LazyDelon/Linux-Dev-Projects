@@ -232,3 +232,80 @@ _                             ← 這個時候，游標會停留在這裡等待�
 %   remainder
 
 ```
+
+
+```
+
+[root@localhost ~]$ bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+
+1 + 2 + 3 + 4 + 5      ← addition
+15
+
+5 - 10 + 15            ← Subtraction
+10
+
+10 * 5                 ← Multiplication
+50
+
+10 % 3                 ← division
+1
+
+10 * 2                 ← index
+20
+
+10 / 100               ← remainder
+0
+
+quit                   ← 離開 bc 這個計算器
+                          
+```
+
+
+
+## 📋 `[Tab]` key
+
+**The [Tab] button is the button above the caps light switch button ([Caps Lock]) on the keyboard! Among various Unix-like shells, this [Tab] button is one of the best features of the Linux Bash shell! It has the functions of "command completion" and "file completion"! The point is, it can prevent us from typing the wrong command or file name! Great! But pressing the [Tab] key in different places will produce different results! Let's take the following example to illustrate. Didn’t we mention the cal instruction in the previous section? If I type ca in the command line and press the [tab] key twice, what message will appear?**
+
+```
+
+[root@localhost ~]$ ca[tab][tab]    <==[tab]按鍵是緊接在 a 字母後面！
+cacertdir_rehash     cairo-sphinx         cancel               case
+cache_check          cal                  cancel.cups          cat
+cache_dump           calibrate_ppa        capsh                catchsegv
+cache_metadata_size  caller               captoinfo            catman
+
+```
+
+**Tips： The [tab] above refers to "press that tab key", it does not require you to enter the tab in the square brackets!**
+
+**What did you find? All instructions starting with ca are displayed! Very good! So what will happen if you enter "ls -al ~/.bash" and add two [tabs]?**
+
+
+```
+
+[root@localhost ~]$ ls -al ~/.bash[tab][tab]
+.bash_history  .bash_logout   .bash_profile  .bashrc
+
+```
+
+**Huh! All file names starting with .bash in this directory will be displayed! Pay attention to the above two examples. If the place where we press the [tab] button is after command (the first input data), it represents "command completion". If it is after the second word , it will become a "File Completion" function! However, under certain special instructions, the file completion function may become "parameter/option completion"! We also use the date command to check:**
+
+
+## 📋 `[Ctrl + c]` key
+
+**If you enter an incorrect command or parameter under Linux, sometimes the command or program will "run non-stop" under the system. What should you do? Don't worry, if you want to "stop" the current program, you can enter: [Ctrl] and the c key (press and hold [Ctrl] first, and then press the c key, which is the key combination), that is the interrupt The button of the current program! For example, if you enter the command "find /", the system will start to run something (ignore the meaning of this command string for now), and then you press the `[Ctrl + c]` key combination for him, hehe! Did you immediately find that this command string was terminated? That’s what it means!**
+
+
+
+## 📋 `[Ctrl + d]` key
+
+**So what is  `[Ctrl + d]`? It’s the combination of [Ctrl] and the d key! This key combination usually means: "End Of File, EOF or End Of Input"! In addition, it can also be used to replace the exit input! For example, if you want to leave the text interface directly, you can directly press  `[Ctrl + d]` to leave directly (equivalent to typing exit!).**
+
+
+
+
+
