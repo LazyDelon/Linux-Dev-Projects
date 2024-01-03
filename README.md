@@ -88,7 +88,7 @@
 
 **Click "Start", as shown below:**
 
-&nbsp; <img src="./Images/Start Virtual Machine.png" alt="Start Virtual Machine"/>
+&nbsp; <img src="./Images/Start Virtual Machine.png" alt="Start Virtual Machine" style="width:700px"/>
 
 
 #### 10. Install CentOS 7。
