@@ -79,3 +79,25 @@ In Linux systems, English uppercase and lowercase letters are different. For exa
 
 
 
+
+**Notice in the above description, "The first input data is definitely a command or an executable file"! This is a very important concept! Also, pressing the [Enter] key means to start executing this command. Let's do it in practice: Use the ls "command" to list "all hidden files and related file attributes" under "your home directory (~)". To achieve the above requirements, you need to add the -al option, so:**
+
+```
+
+[root@localhost ~]$ ls -al ~
+[root@localhost ~]$ ls           -al   ~
+[root@localhost ~]$ ls -a  -l ~
+
+```
+
+**The above three instructions are issued in exactly the same way and the execution results are exactly the same! Why? Please refer to the instructions above! Regarding the more detailed use of text mode, please pay special attention to the fact that in the Linux environment, "uppercase and lowercase letters are different things!" 』In other words, under Linux, the two files VBird and vbird are "completely different" files! Therefore, when you issue an instruction, you must pay attention to whether the instruction is in uppercase or lowercase. For example, when entering the following command, see what happens:**
+
+
+
+```
+
+[root@localhost ~]$ date      ← 結果顯示日期與時間
+[root@localhost ~]$ Date      ← 結果顯示找不到指令
+[root@localhost ~]$ DATE      ← 結果顯示找不到指令
+
+```
