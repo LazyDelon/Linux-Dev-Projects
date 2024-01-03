@@ -29,7 +29,7 @@
 
 **Run VirtualBox and click the "New" button, as shown below:**
 
-&nbsp; <img src="./Images/Virtual Machine Creation.png" alt="Virtual Machine Creation" style="width:600px"/>
+&nbsp; <img src="./Images/Virtual Machine Creation.png" alt="Virtual Machine Creation" style="width:700px"/>
 
 
 
