@@ -222,9 +222,13 @@ _                             ← 這個時候，游標會停留在這裡等待�
 
 **In fact, we have "entered the working environment of BC software"! It's like we use "Babacus" in Windows! Therefore, the data we are trying to input below are all calculations being performed in the bc program. So, of course, the information you enter must meet BC’s requirements! Before basic BC computer operations, let’s first tell you a few operators used:**
 
-* **+ addition**
-* **- Subtraction**
-* * Multiplication
-* **/ division**
-*　**^ index**
-* **% remainder**
+```
+
++   addition
+-   Subtraction
+*   Multiplication
+/   division
+^   index
+%   remainder
+
+```
