@@ -68,7 +68,7 @@
 
 **Click "Settings" as shown below:**
 
-&nbsp; <img src="./Images/Virtual Machine Settings.png" alt="Virtual Machine Settings"/>
+&nbsp; <img src="./Images/Virtual Machine Settings.png" alt="Virtual Machine Settings" style="width:700px"/>
 
 
 #### 7. Select Disk File。
