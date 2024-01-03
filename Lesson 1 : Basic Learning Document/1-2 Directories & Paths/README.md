@@ -40,3 +40,13 @@
 
 ```
 
+
+
+**Let’s talk about some common instructions for processing directories:**
+
+* **cd：變換目錄**
+* **pwd：顯示目前的目錄**
+* **mkdir：建立一個新的目錄**
+* **rmdir：刪除一個空的目錄**
+
+  
