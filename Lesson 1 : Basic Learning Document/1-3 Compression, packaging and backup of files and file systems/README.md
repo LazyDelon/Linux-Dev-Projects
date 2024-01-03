@@ -459,4 +459,27 @@ tar: /etc/yum.repos.d/CentOS-fasttrack.repo: file is unchanged; not dumped
 
 
 
+```
+
+# 1. 先處理要放置備份資料的目錄與權限：
+[root@localhost ~]# mkdir /backups
+[root@localhost ~]# chmod 700 /backups
+[root@localhost ~]# ll -d /backups
+drwx------. 2 root root 6 Jul  1 17:25 /backups
+
+# 2. 假設今天是 2015/07/01 ，則建立備份的方式如下：
+[root@localhost ~]# tar -jcv -f /backups/backup-system-20150701.tar.bz2 \
+> --exclude=/root/*.bz2 --exclude=/root/*.gz --exclude=/home/loop* \
+> /etc /home /var/spool/mail /var/spool/cron /root
+....(過程省略)....
+
+[root@localhost ~]# ll -h /backups/
+-rw-r--r--. 1 root root 21M Jul  1 17:26 backup-system-20150701.tar.bz2
+
+```
+
+
+
+
+
 
