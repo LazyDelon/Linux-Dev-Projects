@@ -10,3 +10,24 @@
 
 ➤  **資料來源：** [**Linux 私房菜 by~鳥哥**](https://linux.vbird.org/)   
 
+## 📋 Setting up your environment
+
+### VirtualBox installs CentOS 7
+
+
+
+**Build a virtual practice environment. Today's computers have too much power and space. Although the computer doesn't work, it's enough for practice. No need to worry about computer errors while practicing. This is the benefit of VM OS.**
+
+**When you join a new company, you will be assigned a computer. There are ownership issues with the software on your computer. Especially the larger the company, the stricter the MIS management. Be careful of piracy and do not download bad software. Taking it to the company has become a habit. This is for you and the company. Penalties for private use of pirated software are severe.**
+
+**Preparation software: Oracle VM VirtualBox, any version of Windows ISO**
+
+**Now I want to introduce to you a virtual environment software-Oracle VM VirtualBox. The main point of this software is that it is free. Installation is simple and setup is not too complicated. It can install different operating system software and even simulate a MAC. The key is that you need to have the installation file. Remember to use the WINDOWS operating system as the ISO file first to facilitate software installation.**
+
+
+#### 1. Virtual Machine Creation。
+
+
+
+
+
