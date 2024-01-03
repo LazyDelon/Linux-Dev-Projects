@@ -56,28 +56,28 @@
 
 [root@localhost ~]$ su -                     ←  先切換身份成為 root 看看！
 
-[root@study ~]# cd                           ←  [相對路徑或絕對路徑]
+[root@localhost ~]# cd                           ←  [相對路徑或絕對路徑]
 # 最重要的就是目錄的絕對路徑與相對路徑，還有一些特殊目錄的符號囉！
 
-[root@study ~]# cd ~dmtsai
+[root@localhost ~]# cd ~dmtsai
 # 代表去到 dmtsai 這個使用者的家目錄，亦即 /home/dmtsai
 
-[root@study dmtsai]# cd ~
+[root@localhost dmtsai]# cd ~
 # 表示回到自己的家目錄，亦即是 /root 這個目錄
 
-[root@study ~]# cd
+[root@localhost ~]# cd
 # 沒有加上任何路徑，也還是代表回到自己家目錄的意思喔！
 
-[root@study ~]# cd ..
+[root@localhost ~]# cd ..
 # 表示去到目前的上層目錄，亦即是 /root 的上層目錄的意思；
 
-[root@study /]# cd -
+[root@localhost /]# cd -
 # 表示回到剛剛的那個目錄，也就是 /root 囉～
 
-[root@study ~]# cd /var/spool/mail
+[root@localhost ~]# cd /var/spool/mail
 # 這個就是絕對路徑的寫法！直接指定要去的完整路徑名稱！
 
-[root@study mail]# cd ../postfix
+[root@localhost mail]# cd ../postfix
 # 這個是相對路徑的寫法，我們由/var/spool/mail 去到/var/spool/postfix 就這樣寫！
 
 ```
@@ -87,25 +87,25 @@
 
 ```
 
-[root@study ~]# pwd [-P]
+[root@localhost ~]# pwd [-P]
 
 選項與參數：
 -P  ：顯示出確實的路徑，而非使用連結 (link) 路徑。
 
 範例：單純顯示出目前的工作目錄：
-[root@study ~]# pwd
+[root@localhost ~]# pwd
 /root   <== 顯示出目錄啦～
 
 範例：顯示出實際的工作目錄，而非連結檔本身的目錄名而已
-[root@study ~]# cd /var/mail    ← 注意，/var/mail是一個連結檔
+[root@localhost ~]# cd /var/mail    ← 注意，/var/mail是一個連結檔
 
-[root@study mail]# pwd
+[root@localhost mail]# pwd
 /var/mail                       ← 列出目前的工作目錄
 
-[root@study mail]# pwd -P
+[root@localhost mail]# pwd -P
 /var/spool/mail                 ← 怎麼回事？有沒有加 -P 差很多～
 
-[root@study mail]# ls -ld /var/mail
+[root@localhost mail]# ls -ld /var/mail
 lrwxrwxrwx. 1 root root 10 May  4 17:51 /var/mail -> spool/mail
 
 # 看到這裡應該知道為啥了吧？因為 /var/mail 是連結檔，連結到 /var/spool/mail 
@@ -120,26 +120,26 @@ lrwxrwxrwx. 1 root root 10 May  4 17:51 /var/mail -> spool/mail
 
 ```
 
-[root@study ~]# mkdir [-mp] 目錄名稱
+[root@localhost ~]# mkdir [-mp] 目錄名稱
 
 選項與參數：
 -m ：設定檔案的權限喔！直接設定，不需要看預設權限 (umask) 的臉色～
 -p ：幫助你直接將所需要的目錄(包含上層目錄)遞迴建立起來！
 
 範例：請到/tmp底下嘗試建立數個新目錄看看：
-[root@study ~]# cd /tmp
+[root@localhost ~]# cd /tmp
 
-[root@study tmp]# mkdir test             ← 建立一名為 test 的新目錄
+[root@localhost tmp]# mkdir test             ← 建立一名為 test 的新目錄
 
-[root@study tmp]# mkdir test1/test2/test3/test4
+[root@localhost tmp]# mkdir test1/test2/test3/test4
 mkdir: cannot create directory ‘test1/test2/test3/test4’: No such file or directory
 
-[root@study tmp]# mkdir -p test1/test2/test3/test4
+[root@localhost tmp]# mkdir -p test1/test2/test3/test4
 # 原來是要建 test4 上層沒先建 test3 之故！加了這個 -p 的選項，可以自行幫你建立多層目錄！
 
 範例：建立權限為rwx--x--x的目錄
-[root@study tmp]# mkdir -m 711 test2
-[root@study tmp]# ls -ld test*
+[root@localhost tmp]# mkdir -m 711 test2
+[root@localhost tmp]# ls -ld test*
 drwxr-xr-x. 2 root   root  6 Jun  4 19:03 test
 drwxr-xr-x. 3 root   root 18 Jun  4 19:04 test1
 drwx--x--x. 2 root   root  6 Jun  4 19:05 test2
@@ -153,26 +153,26 @@ drwx--x--x. 2 root   root  6 Jun  4 19:05 test2
 
 ```
 
-[root@study ~]# rmdir [-p] 目錄名稱
+[root@localhost ~]# rmdir [-p] 目錄名稱
 
 選項與參數：
 -p ：連同『上層』『空的』目錄也一起刪除
 
 範例：將於mkdir範例中建立的目錄(/tmp底下)刪除掉！
 
-[root@study tmp]# ls -ld test*           ← 看看有多少目錄存在？
+[root@localhost tmp]# ls -ld test*           ← 看看有多少目錄存在？
 drwxr-xr-x. 2 root   root  6 Jun  4 19:03 test
 drwxr-xr-x. 3 root   root 18 Jun  4 19:04 test1
 drwx--x--x. 2 root   root  6 Jun  4 19:05 test2
 
-[root@study tmp]# rmdir test             ← 可直接刪除掉，沒問題
+[root@localhost tmp]# rmdir test             ← 可直接刪除掉，沒問題
 
-[root@study tmp]# rmdir test1            ← 因為尚有內容，所以無法刪除！
+[root@localhost tmp]# rmdir test1            ← 因為尚有內容，所以無法刪除！
 rmdir: failed to remove ‘test1’: Directory not empty
 
-[root@study tmp]# rmdir -p test1/test2/test3/test4
+[root@localhost tmp]# rmdir -p test1/test2/test3/test4
 
-[root@study tmp]# ls -ld test*            ← 您看看，底下的輸出中test與test1不見了！
+[root@localhost tmp]# ls -ld test*            ← 您看看，底下的輸出中test與test1不見了！
 drwx--x--x. 2 root   root  6 Jun  4 19:05 test2
 
 # 瞧！利用 -p 這個選項，立刻就可以將 test1/test2/test3/test4 一次刪除～
@@ -427,7 +427,7 @@ rm: remove regular empty file `/tmp/etc/crypttab'? ^C       ←  按下 [ctrl]+c
 rm: invalid option -- 'a'                              ←  因為 "-" 是選項嘛！所以系統誤判了！
 Try 'rm ./-aaa-' to remove the file `-aaa-'.           ←  新的 bash 有給建議的
 Try 'rm --help' for more information.
-[root@study tmp]# rm ./-aaa-
+[root@localhost tmp]# rm ./-aaa-
 
 ```
 
@@ -457,7 +457,7 @@ Try 'rm --help' for more information.
 # 將某個檔案移動到某個目錄去，就是這樣做！
 
 範例二：將剛剛的目錄名稱更名為 mvtest2
-[root@study tmp]# mv mvtest mvtest2      ← 這樣就更名了！簡單～
+[root@localhost tmp]# mv mvtest mvtest2      ← 這樣就更名了！簡單～
 # 其實在 Linux 底下還有個有趣的指令，名稱為 rename ，
 # 該指令專職進行多個檔名的同時更名，並非針對單一檔名變更，與mv不同。請man rename。
 
