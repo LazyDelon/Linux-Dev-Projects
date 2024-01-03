@@ -101,3 +101,66 @@ In Linux systems, English uppercase and lowercase letters are different. For exa
 [root@localhost ~]$ DATE      ← 結果顯示找不到指令
 
 ```
+
+
+
+
+
+## 📋 Basic command operations
+
+
+* **顯示日期與時間的指令： date**
+* **顯示日曆的指令： cal**
+* **簡單好用的計算機： bc**
+
+
+
+#### 1. Instruction to display date: date
+
+**If you want to know the current time of the Linux system in the text interface, just enter date directly in the command line mode to display:**
+
+```
+
+[root@localhost ~]$ date
+Wed Jan 3 13:01:32 CST 2024
+
+```
+
+**What it shows is: Wednesday, January 3rd, 13:01 minutes, 32 seconds, in the 2024 CST time zone! Taiwan is in the CST time zone! Please hurry up and try it out! Okay, so what if I want this program to display a date like "2024/01/03"? Then use the formatted output function of date!**
+
+
+```
+
+[root@localhost ~]$ date +%Y/%m/%d
+2024/01/03
+
+[root@localhost ~]$ date +%H:%M
+13:04
+
+```
+
+
+#### 2. Instruction to display calendar: cal
+
+**So what if I want to list the monthly calendar for the current month? Just give him the cal directly!**
+
+
+```
+
+[root@localhost ~]$ cal
+
+    January 2024
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+```
+
+**In addition to this month's calendar, today's date will also be displayed in highlight! Interesting! The cal (calendar) command can do many things. For example, you can display the monthly calendar for the entire year:**
+
+
+&nbsp; <img src="./Images/Monthly Calendar For the Whole Year.png" alt="Monthly Calendar For the Whole Year"/>
+
