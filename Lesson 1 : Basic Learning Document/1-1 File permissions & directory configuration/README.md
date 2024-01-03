@@ -120,15 +120,15 @@ dr-xr-xr-x.       17       root        root        224          Jan  3 11:27    
 
 ```
 
-[root@study ~]# chgrp [-R] dirname/filename ...
+[root@localhost ~]# chgrp [-R] dirname/filename ...
 選項與參數：
 -R : 進行遞迴(recursive)的持續變更，亦即連同次目錄下的所有檔案、目錄
      都更新成為這個群組之意。常常用在變更某一目錄內所有的檔案之情況。
 範例：
-[root@study ~]# chgrp users initial-setup-ks.cfg
-[root@study ~]# ls -l
+[root@localhost ~]# chgrp users initial-setup-ks.cfg
+[root@localhost ~]# ls -l
 -rw-r--r--. 1 root users 1864 May  4 18:01 initial-setup-ks.cfg
-[root@study ~]# chgrp testing initial-setup-ks.cfg
+[root@localhost ~]# chgrp testing initial-setup-ks.cfg
 chgrp: invalid group:  `testing' <== 發生錯誤訊息囉～找不到這個群組名～
 
 ```
@@ -141,19 +141,19 @@ chgrp: invalid group:  `testing' <== 發生錯誤訊息囉～找不到這個群�
 
 ```
 
-[root@study ~]# chown [-R] 帳號名稱 檔案或目錄
-[root@study ~]# chown [-R] 帳號名稱:群組名稱 檔案或目錄
+[root@localhost ~]# chown [-R] 帳號名稱 檔案或目錄
+[root@localhost ~]# chown [-R] 帳號名稱:群組名稱 檔案或目錄
 選項與參數：
 -R : 進行遞迴(recursive)的持續變更，亦即連同次目錄下的所有檔案都變更
 
 範例：將 initial-setup-ks.cfg 的擁有者改為bin這個帳號：
-[root@study ~]# chown bin initial-setup-ks.cfg
-[root@study ~]# ls -l
+[root@localhost ~]# chown bin initial-setup-ks.cfg
+[root@localhost ~]# ls -l
 -rw-r--r--. 1 bin  users 1864 May  4 18:01 initial-setup-ks.cfg
 
 範例：將 initial-setup-ks.cfg 的擁有者與群組改回為root：
-[root@study ~]# chown root:root initial-setup-ks.cfg
-[root@study ~]# ls -l
+[root@localhost ~]# chown root:root initial-setup-ks.cfg
+[root@localhost ~]# ls -l
 -rw-r--r--. 1 root root 1864 May  4 18:01 initial-setup-ks.cfg
 
 ```
@@ -164,7 +164,7 @@ chgrp: invalid group:  `testing' <== 發生錯誤訊息囉～找不到這個群�
 
 ```
 
-[root@study ~]# cp 來源檔案 目的檔案
+[root@localhost ~]# cp 來源檔案 目的檔案
 
 ```
 
@@ -174,8 +174,8 @@ chgrp: invalid group:  `testing' <== 發生錯誤訊息囉～找不到這個群�
 
 ```
 
-[root@study ~]# cp .bashrc .bashrc_test
-[root@study ~]# ls -al .bashrc*
+[root@localhost ~]# cp .bashrc .bashrc_test
+[root@localhost ~]# ls -al .bashrc*
 -rw-r--r--. 1 root root 176 Dec 29  2013 .bashrc
 -rw-r--r--. 1 root root 176 Jun  3 00:04 .bashrc_test   <==新檔案的屬性沒變
 
@@ -201,7 +201,7 @@ others= --- = 0+0+0 = 0
 
 ```
 
-[root@study ~]# chmod [-R] xyz 檔案或目錄
+[root@localhost ~]# chmod [-R] xyz 檔案或目錄
 選項與參數：
 xyz : 就是剛剛提到的數字類型的權限屬性，為 rwx 屬性數值的相加。
 -R : 進行遞迴(recursive)的持續變更，亦即連同次目錄下的所有檔案都會變更
@@ -212,10 +212,10 @@ xyz : 就是剛剛提到的數字類型的權限屬性，為 rwx 屬性數值的
 
 ```
 
-[root@study ~]# ls -al .bashrc
+[root@localhost ~]# ls -al .bashrc
 -rw-r--r--. 1 root root 176 Dec 29  2013 .bashrc
-[root@study ~]# chmod 777 .bashrc
-[root@study ~]# ls -al .bashrc
+[root@localhost ~]# chmod 777 .bashrc
+[root@localhost ~]# ls -al .bashrc
 -rwxrwxrwx. 1 root root 176 Dec 29  2013 .bashrc
 
 ```
