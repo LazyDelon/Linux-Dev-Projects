@@ -75,3 +75,7 @@ Last login: Fri May 29 11:55:05 on tty1         ← 上次登入的情況
 
 **8. other:
 In Linux systems, English uppercase and lowercase letters are different. For example, cd is not the same as CD.**
+
+
+
+
