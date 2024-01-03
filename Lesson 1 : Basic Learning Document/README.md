@@ -164,3 +164,67 @@ Su Mo Tu We Th Fr Sa
 
 &nbsp; <img src="./Images/Monthly Calendar For the Whole Year.png" alt="Monthly Calendar For the Whole Year"/>
 
+
+
+**Basically, the syntax that can be connected to the cal command is:**
+
+```
+
+[root@localhost ~]$ cal [month] [year]
+
+```
+
+
+
+**So, if I want to know the monthly calendar for January 2024, I can directly issue:**
+
+```
+
+[root@localhost ~]$ cal 01 2024
+
+    January 2024
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+```
+
+**So, is there 13 months this year? Let’s test the correctness of this command! Issue the following command to see:**
+
+```
+
+[root@localhost ~]$ cal 13 2024
+
+cal: illegal month value: use 1-12
+
+```
+
+
+#### 3. Simple and easy-to-use computer: bc
+
+**If you are in text mode and suddenly want to do some simple addition, subtraction, multiplication and division, but you don’t have a computer at hand! Do you need to do calculations at this time? No need! Our Linux provides a calculation program, that is bc. After you enter bc in the command line, the version information will be displayed on the screen, and then you will enter the stage of waiting for instructions. As follows:**
+
+
+```
+
+[root@localhost ~]$ bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+_                             ← 這個時候，游標會停留在這裡等待你的輸入
+
+```
+
+
+**In fact, we have "entered the working environment of BC software"! It's like we use "Babacus" in Windows! Therefore, the data we are trying to input below are all calculations being performed in the bc program. So, of course, the information you enter must meet BC’s requirements! Before basic BC computer operations, let’s first tell you a few operators used:**
+
+* **+ addition**
+* **- Subtraction**
+* * Multiplication
+* **/ division**
+*　**^ index**
+* **% remainder**
